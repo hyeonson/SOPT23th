@@ -4,6 +4,7 @@ import org.sopt.model.Department;
 import org.sopt.model.Student;
 import org.sopt.model.University;
 import org.sopt.model.builder.DepartmentBuilder;
+import org.sopt.service.StudentService;
 
 import java.util.ArrayList;
 

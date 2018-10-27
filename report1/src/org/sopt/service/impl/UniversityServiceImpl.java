@@ -4,15 +4,25 @@ import org.sopt.model.University;
 import org.sopt.model.builder.UniversityBuilder;
 import org.sopt.service.UniversityService;
 
+import java.util.List;
+
 public class UniversityServiceImpl implements UniversityService {
+    private List<University> UniversityList;
     @Override
     public University getByUniversityId(final int UniversityId)
     {
-        return new UniversityBuilder()
-                .setId(UniversityId)
-                .setName("인하대")
-                .setCall("03212345678")
-                .setAddress("용현동")
-                .build();
+        for(University u : UniversityList)
+        {
+            if(u.getId() == UniversityId)
+            {
+                return u;
+            }
+        }
+        return null;
+    }
+    @Override
+    public void addUniversity(University u)
+    {
+        UniversityList.add(u);
     }
 }

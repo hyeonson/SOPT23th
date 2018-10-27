@@ -6,21 +6,26 @@ import org.sopt.model.builder.StudentBuilder;
 import org.sopt.model.builder.UniversityBuilder;
 import org.sopt.service.StudentService;
 
+import java.util.List;
+
 
 public class StudentServiceImpl implements StudentService{
+    private List<Student> StudentList;
 
     @Override
     public Student getByStudentId(final int StudentId)
     {
-        return new StudentBuilder()
-                .setId(StudentId)
-                .setName("김현수")
-                .setGrade(3)
-                .setEmail("gumgim95@naver.com")
-                .setAddress("용현동")
-                .setAge(24)
-                .setState("재학중")
-                .build();
+        for(Student s : StudentList)
+        {
+            if(s.getId() == StudentId)
+                return s;
+        }
+        return null;
     };
+    @Override
+    public void addStudent(Student s)
+    {
+        StudentList.add(s);
+    }
 
 }
