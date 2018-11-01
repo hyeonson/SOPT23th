@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b06a8262-637f-458e-a669-c92afa257c8a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/sopt/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/sopt/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/sopt/service/DepartmentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/sopt/service/DepartmentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/sopt/service/ProfessorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/sopt/service/ProfessorService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/sopt/service/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/sopt/service/StudentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/sopt/service/UniversityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/sopt/service/UniversityService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/sopt/service/impl/DepartmentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/sopt/service/impl/DepartmentServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/sopt/service/impl/ProfessorServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/sopt/service/impl/ProfessorServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/sopt/service/impl/StudentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/sopt/service/impl/StudentServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/sopt/service/impl/UniversityServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/sopt/service/impl/UniversityServiceImpl.java" afterDir="false" />
-    </list>
+    <list default="true" id="b06a8262-637f-458e-a669-c92afa257c8a" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -61,7 +49,7 @@
     <session id="-650043246">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.4" value="1" />
           <entry key="project.opened" value="2" />
@@ -162,8 +150,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/org/sopt/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="703">
-              <caret line="37" column="40" lean-forward="true" selection-start-line="37" selection-start-column="40" selection-end-line="37" selection-end-column="40" />
+            <state relative-caret-position="399">
+              <caret line="21" column="38" lean-forward="true" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -355,7 +343,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540621455061" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540628328905" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
@@ -402,12 +390,12 @@
       <workItem from="1540362535388" duration="11130000" />
       <workItem from="1540549836143" duration="4952000" />
       <workItem from="1540620126218" duration="1487000" />
-      <workItem from="1540626068723" duration="1963000" />
+      <workItem from="1540626068723" duration="2257000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21020000" />
+    <option name="totallyTimeSpent" value="21314000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
@@ -660,8 +648,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/sopt/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="703">
-          <caret line="37" column="40" lean-forward="true" selection-start-line="37" selection-start-column="40" selection-end-line="37" selection-end-column="40" />
+        <state relative-caret-position="399">
+          <caret line="21" column="38" lean-forward="true" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
