@@ -82,4 +82,33 @@ public class UserController {
         userList.add(user);
     }
 
+    @PutMapping("/users/{user_idx}")
+    public String setUser(@PathVariable(value = "user_idx") final int user_idx,
+                          @RequestBody final User user){
+        for(User u : userList)
+        {
+            if(u.getUser_idx() == user_idx)
+            {
+                u.setUser_idx(user.getUser_idx());
+                u.setName(user.getName());
+                u.setPart(user.getPart());
+                return "수정완료";
+            }
+        }
+        return "그런 id를 가진 User 없습니다";
+    }
+
+    @DeleteMapping("/users/{user_idx}")
+    public String deleteUser(@PathVariable(value = "user_idx") final int user_idx) {
+        for(User u : userList)
+        {
+            if(u.getUser_idx() == user_idx)
+            {
+                userList.remove(u);
+                return "삭제완료";
+            }
+        }
+        return "그런 id를 가진 User 없습니다";
+    }
+
 }
