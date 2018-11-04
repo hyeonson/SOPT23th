@@ -20,50 +20,52 @@ public class UserController {
         SimpleDateFormat dayTime = new SimpleDateFormat("yyyy-mm-dd hh:mm:ss");
         return dayTime.format(new Date(time));
     }
-
-    @GetMapping("/users/")
-    public String getUserList(){
-        if(userList.isEmpty())
-            return "없습니다";
-        String str = new String();
-        for(User u : userList)
-        {
-            str += u.toString();
-        }
-        return str;
-    }
     @GetMapping("/users")
-    public String getName(@RequestParam(value = "name", defaultValue = "") final String name){
-        List<User> tempList = new LinkedList<>();
-        for(User u : userList)
+    public String getName(@RequestParam(value = "name", defaultValue = "null") final String name,
+                          @RequestParam(value = "part", defaultValue = "null") final String part){
+        if(name.equals("null") && part.equals("null"))
         {
-            if(u.getName().equals(name))
-                tempList.add(u);
+            if(userList.isEmpty())
+                return "없습니다";
+            String str = new String();
+            for(User u : userList)
+            {
+                str += u.toString();
+            }
+            return str;
         }
-        if(tempList.isEmpty())
-            return "없습니다";
-        String str = new String();
-        for(User u : tempList)
-        {
-            str += u.toString();
+        else {
+            List<User> tempList = new LinkedList<>();
+            if(name.equals("null")) {
+                for (User u : userList) {
+                    if (u.getPart().equals(part))
+                        tempList.add(u);
+                }
+            }
+            else if(part.equals("null"))
+            {
+                for(User u : userList)
+                {
+                    if(u.getName().equals(name))
+                        tempList.add(u);
+                }
+            }
+            else
+            {
+                for(User u : userList)
+                {
+                    if(u.getName().equals(name) && u.getPart().equals(part))
+                        tempList.add(u);
+                }
+            }
+            if (tempList.isEmpty())
+                return "없습니다";
+            String str = new String();
+            for (User u : tempList) {
+                str += u.toString();
+            }
+            return str;
         }
-        return str;
-    }
-    public String getPart(@RequestParam(value = "part", defaultValue = "") final String part){
-        List<User> tempList = new LinkedList<>();
-        for(User u : userList)
-        {
-            if(u.getName().equals(part))
-                tempList.add(u);
-        }
-        if(tempList.isEmpty())
-            return "없습니다";
-        String str = new String();
-        for(User u : tempList)
-        {
-            str += u.toString();
-        }
-        return str;
     }
     @GetMapping("/users/{user_idx}")
     public String getUserIdx(@PathVariable(value = "user_idx") final int user_idx){
