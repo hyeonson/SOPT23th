@@ -73,7 +73,8 @@ public class ProfessorBuilder {
         this.subject = subject;
         return this;
     }
-    public Professor build(){
+
+    public Professor build() {
         return new Professor(this.id, this.name, this.call, this.address, this.type, this.departmentName, this.subject);
     }
 }

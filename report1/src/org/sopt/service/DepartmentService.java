@@ -5,5 +5,6 @@ import org.sopt.model.Student;
 
 public interface DepartmentService {
     Department getByDepartmentId(final int DepartmentId);
+
     void addDepartment(Department d);
 }

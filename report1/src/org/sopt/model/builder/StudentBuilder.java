@@ -103,9 +103,9 @@ public class StudentBuilder {
         this.state = state;
         return this;
     }
-    public Student build()
-    {
+
+    public Student build() {
         return new Student(this.id, this.name, this.call, this.address, this.type,
-        this.grade, this.departmentName, this.email, this.age, this.state);
+                this.grade, this.departmentName, this.email, this.age, this.state);
     }
 }

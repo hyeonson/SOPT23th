@@ -1,6 +1,6 @@
 package org.sopt.model;
 
-public class Student extends Department{
+public class Student extends Department {
     private int grade;
     private String departmentName;
     private String email;
@@ -55,7 +55,8 @@ public class Student extends Department{
     public void setState(String state) {
         this.state = state;
     }
-    public String toString(){
+
+    public String toString() {
         return "학번: " + getId() + " 이름: " + getName() + " 학년: " + getGrade() +
                 " 학과: " + getDepartmentName() + " 이메일: " + getEmail() + " 주소: " + getAddress() +
                 " 나이: " + getAge() + "현재 상태: " + getState();

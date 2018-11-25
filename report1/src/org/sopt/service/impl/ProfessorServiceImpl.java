@@ -9,19 +9,20 @@ import java.util.List;
 
 public class ProfessorServiceImpl implements ProfessorService {
     private List<Professor> ProfessorList;
+
     @Override
-    public Professor getByProfessorId(final int ProfessorId)
-    {
-        for(Professor p : ProfessorList)
-        {
-            if(p.getId() == ProfessorId)
+    public Professor getByProfessorId(final int ProfessorId) {
+        for (Professor p : ProfessorList) {
+            if (p.getId() == ProfessorId)
                 return p;
         }
         return null;
-    };
+    }
+
+    ;
+
     @Override
-    public void addProfessor(Professor p)
-    {
+    public void addProfessor(Professor p) {
         ProfessorList.add(p);
     }
 }

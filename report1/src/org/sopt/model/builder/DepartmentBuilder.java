@@ -52,8 +52,8 @@ public class DepartmentBuilder {
         this.type = type;
         return this;
     }
-    public Department build()
-    {
+
+    public Department build() {
         return new Department(this.id, this.name, this.call, this.address, this.type);
     }
 }

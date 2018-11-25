@@ -8,21 +8,19 @@ import java.util.List;
 
 public class UniversityServiceImpl implements UniversityService {
     private List<University> UniversityList;
+
     @Override
-    public University getByUniversityId(final int UniversityId)
-    {
-        for(University u : UniversityList)
-        {
-            if(u.getId() == UniversityId)
-            {
+    public University getByUniversityId(final int UniversityId) {
+        for (University u : UniversityList) {
+            if (u.getId() == UniversityId) {
                 return u;
             }
         }
         return null;
     }
+
     @Override
-    public void addUniversity(University u)
-    {
+    public void addUniversity(University u) {
         UniversityList.add(u);
     }
 }

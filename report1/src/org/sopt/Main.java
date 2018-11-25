@@ -10,8 +10,7 @@ import java.util.ArrayList;
 
 public class Main {
 
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         final ArrayList<Department> departmentList = new ArrayList<>();
         final ArrayList<Student> studentList = new ArrayList<>();
 
@@ -39,7 +38,7 @@ public class Main {
         departmentList.add(department3);
 
 
-        for(final Department d : departmentList)
+        for (final Department d : departmentList)
             System.out.println(d.toString());
     }
 }

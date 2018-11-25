@@ -44,7 +44,7 @@ public class UniversityBuilder {
         return this;
     }
 
-    public University build(){
+    public University build() {
         return new University(this.id, this.name, this.call, this.address);
     }
 }
