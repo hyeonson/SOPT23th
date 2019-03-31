@@ -25,7 +25,7 @@ public class AuthService {
      * @return DefaultRes
      */
     public DefaultRes<JwtService.TokenRes> login(final LoginReq loginReq) {
-        final User user = userMapper.findByNameAndPassword(loginReq.getName(), loginReq.getPassword());
+        final User user = userMapper.findByNameAndPassword(loginReq.getEmail(), loginReq.getPassword());
         if (user != null) {
             //토큰 생성
             final JwtService.TokenRes tokenDto = new JwtService.TokenRes(jwtService.create(user.getUserIdx()));

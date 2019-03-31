@@ -44,15 +44,15 @@ public class UserController {
 
     @GetMapping("")
     public ResponseEntity getUser(@RequestParam("name") final Optional<String> name,
-                                  @RequestParam("part") final Optional<String> part) {
+                                  @RequestParam("email") final Optional<String> email) {
         try {
             //name이 null일 경우 false, null이 아닐 경우 true
-            if(name.isPresent() && part.isPresent())
-                return new ResponseEntity<>(userService.findByNameAndPart(name.get(), part.get()), HttpStatus.OK);
+            if(name.isPresent() && email.isPresent())
+                return new ResponseEntity<>(userService.findByNameAndEmail(name.get(), email.get()), HttpStatus.OK);
             if(name.isPresent())
                 return new ResponseEntity<>(userService.findByName(name.get()), HttpStatus.OK);
-            if(part.isPresent())
-                return new ResponseEntity<>(userService.findByPart(part.get()), HttpStatus.OK);
+            if(email.isPresent())
+                return new ResponseEntity<>(userService.findByEmail(email.get()), HttpStatus.OK);
             return new ResponseEntity<>(userService.getAllUsers(), HttpStatus.OK);
         } catch (Exception e) {
             log.error(e.getMessage());

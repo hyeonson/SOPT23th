@@ -6,7 +6,7 @@ import org.springframework.web.multipart.MultipartFile;
 @Data
 public class SignUpReq {
     private String name;
-    private String part;
+    private String email;
     private String password;
 
     //프로필 사진 객체

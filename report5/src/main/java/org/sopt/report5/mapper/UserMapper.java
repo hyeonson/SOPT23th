@@ -15,12 +15,12 @@ public interface UserMapper {
     //회원 이름으로 조회
     @Select("SELECT * FROM user WHERE name = #{name}")
     List<User> findByName(@Param("name") final String name);
-    //회원 파트로 조회
-    @Select("SELECT * FROM user WHERE part = #{part}")
-    List<User> findByPart(@Param("part") final String part);
-    //회원 이름과 파트로 조회
-    @Select("SELECT * FROM user WHERE name = #{name} and part = #{part}")
-    List<User> findByNameAndPart(@Param("name") final String name, @Param("part") final String part);
+    //회원 이메일로 조회
+    @Select("SELECT * FROM user WHERE email = #{email}")
+    List<User> findByEmail(@Param("email") final String email);
+    //회원 이름과 이메일로 조회
+    @Select("SELECT * FROM user WHERE name = #{name} and email = #{email}")
+    List<User> findByNameAndEmail(@Param("name") final String name, @Param("email") final String email);
 
     //회원 고유 번호로 조회
     @Select("SELECT * FROM user WHERE userIdx = #{userIdx}")
@@ -28,16 +28,16 @@ public interface UserMapper {
 
     //회원 등록, Auto Increment는 회원 고유 번호
     //Auto Increment 값을 받아오고 싶으면 리턴 타입을 int(Auto Increment 컬럼 타입)으로 하면 된다.
-    @Insert("INSERT INTO user(name, part, password, profileUrl) VALUES(#{signUpReq.name}, #{signUpReq.part}, #{signUpReq.password}, #{signUpReq.profileUrl})")
+    @Insert("INSERT INTO user(name, email, password, profileUrl) VALUES(#{signUpReq.name}, #{signUpReq.email}, #{signUpReq.password}, #{signUpReq.profileUrl})")
     @Options(useGeneratedKeys = true, keyColumn = "user.userIdx")
     int save(@Param("signUpReq") final SignUpReq signUpReq);
 
     //Auto Increment 값을 받아오고 싶지 않다면 필요 없다.
-    @Insert("INSERT INTO user(name, part) VALUES(#{user.name}, #{user.part})")
+    @Insert("INSERT INTO user(name, email) VALUES(#{user.name}, #{user.email})")
     void save2(@Param("user") final User user);
 
     //회원 정보 수정
-    @Update("UPDATE user SET name = #{user.name}, part = #{user.part}, password = #{user.password} WHERE userIdx = #{userIdx}")
+    @Update("UPDATE user SET name = #{user.name}, email = #{user.email}, password = #{user.password} WHERE userIdx = #{userIdx}")
     void update(@Param("userIdx") final int userIdx, @Param("user") final User user);
 
     //회원 삭제

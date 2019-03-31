@@ -58,11 +58,11 @@ public class UserService {
     /**
      * 파트로 회원 조회
      *
-     * @param part 파트
+     * @param email 이메일
      * @return DefaultRes
      */
-    public DefaultRes findByPart(final String part) {
-        final List<User> userList = userMapper.findByPart(part);
+    public DefaultRes findByEmail(final String email) {
+        final List<User> userList = userMapper.findByEmail(email);
         if (userList.isEmpty())
             return DefaultRes.res(StatusCode.NOT_FOUND, ResponseMessage.NOT_FOUND_USER);
         return DefaultRes.res(StatusCode.OK, ResponseMessage.READ_USER, userList);
@@ -74,8 +74,8 @@ public class UserService {
      * @param part 파트
      * @return DefaultRes
      */
-    public DefaultRes findByNameAndPart(final String name, final String part) {
-        final List<User> userList = userMapper.findByNameAndPart(name, part);
+    public DefaultRes findByNameAndEmail(final String name, final String email) {
+        final List<User> userList = userMapper.findByNameAndEmail(name, email);
         if (userList.isEmpty())
             return DefaultRes.res(StatusCode.NOT_FOUND, ResponseMessage.NOT_FOUND_USER);
         return DefaultRes.res(StatusCode.OK, ResponseMessage.READ_USER, userList);
@@ -130,7 +130,7 @@ public class UserService {
 
         try {
             if (signUpReq.getName() != null) temp.setName(signUpReq.getName());
-            if (signUpReq.getPart() != null) temp.setPart(signUpReq.getPart());
+            if (signUpReq.getEmail() != null) temp.setEmail(signUpReq.getEmail());
             if (signUpReq.getPassword() != null) temp.setPassword(signUpReq.getPassword());
             userMapper.update(userIdx, temp);
             return DefaultRes.res(StatusCode.NO_CONTENT, ResponseMessage.UPDATE_USER);
